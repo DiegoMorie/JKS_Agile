@@ -55,7 +55,14 @@ body{
 .colSelector{
     outline-style: inset;
     outline-color: #0b0a31;
+    border-radius: 1em;
 }
+
+.colSelector:hover{
+    background-color: #0b0a31;
+    color: #ffc501;
+}
+
 .item2 { grid-area: menu;}
 
 .item3 { grid-area: main;}
@@ -65,8 +72,7 @@ body{
 
 .grid-container {
   display: grid;
-  grid:
-  'menu menu main main right right';
+  grid: 'menu menu main main right right';
   grid-gap: 1em;
   padding: 10px;
 }
