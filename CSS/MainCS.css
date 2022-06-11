@@ -1,9 +1,10 @@
 body{
     align-items: center;
+    margin: 0;
     font-size: 1.4rem;
     padding-left: 1%;
     padding-right: 1%;
-    background-color: bisque;
+    background-color: rgb(235, 232, 228);
 }
 
 .header {
@@ -11,6 +12,7 @@ body{
     background-color: #0b0a31;
     padding: 20px 10px;
     border-radius: 1em;
+    margin: 10px;
 }
   
 .header a {
@@ -44,7 +46,36 @@ body{
     float: right;
 }
 
+.Box{
+    text-align: center;
+    align-items: center;
+    border-radius: 1rem;
+}
 
+.colSelector{
+    outline-style: inset;
+    outline-color: #0b0a31;
+}
+.item2 { grid-area: menu;}
+
+.item3 { grid-area: main;}
+
+.item4 { grid-area: right;}
+
+
+.grid-container {
+  display: grid;
+  grid:
+  'menu menu main main right right';
+  grid-gap: 1em;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
 
   
 @media screen and (max-width: 500px) {
@@ -57,4 +88,5 @@ body{
     .header-right {
       float: none;
     }
+
 }
