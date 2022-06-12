@@ -6,7 +6,19 @@ function Show(){
 function Ing_Rut(){
     Show()
     const Mod_login = document.getElementById('BoxLog');
-    Mod_login.innerHTML = "<h1>Log in rut</h1><br><input type=\"text\" placeholder=\"Ingrese su rut\"/><br><br><button onsubmit=\"Check(1)\">JOIN</button>" ;
+    Mod_login.innerHTML = "<h1>Login rut</h1><br><input type=\"text\" placeholder=\"Ingrese su rut\"/><br><br><button onsubmit=\"Check(1)\">JOIN</button>" ;
+}
+
+function Ing_Correo(){
+    Show()
+    const Mod_login = document.getElementById('BoxLog');
+    Mod_login.innerHTML = "<h1>Login por Correo</h1><br><input type=\"text\" placeholder=\"Ingrese su correo\"/><br><br><button onsubmit=\"Check(2)\">JOIN</button>" ;
+}
+
+function Ing_DuocPass(){
+    Show()
+    const Mod_login = document.getElementById('BoxLog');
+    Mod_login.innerHTML = "<h1>Login por contraseña</h1><br><input type=\"text\" placeholder=\"Ingrese su contraseña Duoc\"/><br><br><button onsubmit=\"Check(3)\">JOIN</button>" ;
 }
 
 
@@ -43,4 +55,18 @@ function Check(Data,info){
             }
             break;
     }
+}
+
+
+
+function Val_RUT(info){
+    
+}
+
+function Val_Mail(info){
+
+}
+
+function Val_Pass(info){
+    
 }

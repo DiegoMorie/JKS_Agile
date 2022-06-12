@@ -121,7 +121,7 @@ body{
     margin-top: 10vh;
     padding-top: 2vh;
     padding-bottom: 5vh;
-    background-color: var(--bg_DuocColor); /* recordar remover */
+    /*background-color: var(--bg_DuocColor); /* recordar remover */
     color: white;
     align-content: flex-end;
     opacity: 0;
@@ -129,9 +129,9 @@ body{
 }
 
 .boxLog{
-    margin-left: 5%;
-    margin-right: 5%;
-    background-color: var(--bg_DuocContrast);
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: var(--bg_DuocColor);/*var(--bg_DuocContrast);*/
     border-radius: 1em;
     height: fit-content;
 }
