@@ -79,8 +79,9 @@ body{
 }
 
 .bg_Duoc h1{
-    color: white;
+    color: var(--bg_DuocContrast);
     font-style: italic;
+    text-shadow: #0b0a31;
 }
 
 .column {
@@ -129,18 +130,18 @@ body{
 }
 
 .boxLog{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 35vh;
+    margin-right: 35vh;
     background-color: var(--bg_DuocColor);/*var(--bg_DuocContrast);*/
     border-radius: 1em;
     height: fit-content;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) {
     .boxLog{
         margin-left: 50vh;
         margin-right: 50vh;
-        background-color: var(--bg_DuocContrast); 
+        background-color: var(--bg_DuocColor); 
         border-radius: 1em;
         height: fit-content;
     }
