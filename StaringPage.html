@@ -7,8 +7,10 @@
     <link rel="icon" href="MEDIA/pngegg.png" type="image/x-icon">
     <link rel="stylesheet" href="CSS/MainCS.css" type="text/css">
     <title>Welcome!</title>
+    <script src="JS/Functions.js"></script>
 </head>
 <body>
+    <!-- Header of the page || EDIT Later-->
     <div class="header">
         <a href="#default" class="logo">Fenix</a>
         <div class="header-right">
@@ -20,17 +22,33 @@
 
     <!-- Adding the bg full screen size-->
     <div class="Box">
-      <a href="#" class="test"><h1>Bienvenido! <br> ¿Que desea hacer? </h1></a>
+      <div class="bg_Duoc"><h1>Bienvenido! <br> ¿Que desea hacer? </h1></div>
       <br><br>
-      <div class="grid-container">
-        <div class="item2 colSelector" onclick="">RUT</div>
-        <div class="item3 colSelector">Usuario DuocUC</div>  
-        <div class="item4 colSelector">Correo</div>
+
+      <!-- Selector -->
+      <div class="row">
+        <div class="column colSelector" onclick="Ing_Rut()">RUT</div>
+        <div class="column colSelector">Usuario DuocUC</div>  
+        <div class="column colSelector">Correo</div>
       </div>
 
-      <div id="method_holder" class="select">
-        
+
+      <!-- Hided login details-->
+      <div>
+          <div class="logIn_info" id="method_holder">
+            <br>
+            <div class="boxLog">
+              <h1>Log in rut</h1><br>
+              <input type="text" placeholder="Ingrese su rut"/><br><br>
+              <button onsubmit="Check(1)">JOIN</button>
+            </div>
+            
+          </div>
+
       </div>
+
+      <!-- Footer (LAZY , TODO LATER) -->
+
     </div>
 </body>
-</html>
+</html> 

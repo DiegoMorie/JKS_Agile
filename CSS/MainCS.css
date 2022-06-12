@@ -1,23 +1,26 @@
+:root{
+    --bg_DuocColor: #0b0a31;
+    --bg_DuocContrast: #ffc501;
+}
+
+
 body{
     align-items: center;
     margin: 0;
-    font-size: 1.4rem;
-    padding-left: 1%;
-    padding-right: 1%;
+    font-size: 16px;
     background-color: rgb(235, 232, 228);
 }
 
 .header {
     overflow: hidden;
-    background-color: #0b0a31;
+    background-color: var(--bg_DuocColor);
     padding: 20px 10px;
-    border-radius: 1em;
-    margin: 10px;
+
 }
   
 .header a {
     float: left;
-    color: #ffc501;
+    color: var(--bg_DuocContrast);
     text-align: center;
     padding: 12px;
     text-decoration: none;
@@ -54,36 +57,47 @@ body{
 
 .colSelector{
     outline-style: inset;
-    outline-color: #0b0a31;
+    outline-color: var(--bg_DuocColor);
     border-radius: 1em;
 }
 
 .colSelector:hover{
-    background-color: #0b0a31;
-    color: #ffc501;
+    background-color: var(--bg_DuocColor);
+    color: var(--bg_DuocContrast);
 }
 
-.item2 { grid-area: menu;}
-
-.item3 { grid-area: main;}
-
-.item4 { grid-area: right;}
 
 
-.grid-container {
-  display: grid;
-  grid: 'menu menu main main right right';
-  grid-gap: 1em;
-  padding: 10px;
+.bg_Duoc{
+    width: 100%;
+    height: 10rem;
+    padding: 2em 0 4vh 0 ;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../MEDIA/motivacion-y-esfuerzo.jpg");
+    
 }
 
-.grid-container > div {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+.bg_Duoc h1{
+    color: white;
+    font-style: italic;
 }
 
-  
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+.row{
+    margin-left: 2%;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 @media screen and (max-width: 500px) {
     .header a {
       float: none;
@@ -95,4 +109,39 @@ body{
       float: none;
     }
 
+    .column {
+        width: 100%;
+    }
+
+}
+
+.logIn_info{
+    height: 10vh;
+    width: auto;
+    margin-top: 10vh;
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+    background-color: var(--bg_DuocColor); /* recordar remover */
+    color: white;
+    align-content: flex-end;
+    opacity: 0;
+    transition-duration: 500ms;
+}
+
+.boxLog{
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: var(--bg_DuocContrast);
+    border-radius: 1em;
+    height: fit-content;
+}
+
+@media screen and (max-width: 700px) {
+    .boxLog{
+        margin-left: 50vh;
+        margin-right: 50vh;
+        background-color: var(--bg_DuocContrast); 
+        border-radius: 1em;
+        height: fit-content;
+    }
 }
