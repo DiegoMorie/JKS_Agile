@@ -5,8 +5,8 @@ function Show(){
 
 function Ing_Rut(){
     Show()
-    const Mod_login = document.getElementById('Log_type');
-    Mod_login.innerHTML = "Login con Rut" ;
+    const Mod_login = document.getElementById('BoxLog');
+    Mod_login.innerHTML = "<h1>Log in rut</h1><br><input type=\"text\" placeholder=\"Ingrese su rut\"/><br><br><button onsubmit=\"Check(1)\">JOIN</button>" ;
 }
 
 
