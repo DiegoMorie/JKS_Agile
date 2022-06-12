@@ -79,9 +79,8 @@ body{
 }
 
 .bg_Duoc h1{
-    color: var(--bg_DuocContrast);
+    color: white;
     font-style: italic;
-    text-shadow: #0b0a31;
 }
 
 .column {
@@ -91,6 +90,8 @@ body{
 }
 .row{
     margin-left: 2%;
+    padding: 0;
+    row-gap: 1vh;
 }
 
 .row::after {
@@ -122,7 +123,6 @@ body{
     margin-top: 10vh;
     padding-top: 2vh;
     padding-bottom: 5vh;
-    /*background-color: var(--bg_DuocColor); /* recordar remover */
     color: white;
     align-content: flex-end;
     opacity: 0;
@@ -130,9 +130,9 @@ body{
 }
 
 .boxLog{
-    margin-left: 35vh;
-    margin-right: 35vh;
-    background-color: var(--bg_DuocColor);/*var(--bg_DuocContrast);*/
+    margin-left: 65vh;
+    margin-right: 65vh;
+    background-color: var(--bg_DuocColor);
     border-radius: 1em;
     height: fit-content;
 }

@@ -8,19 +8,19 @@ function Show(){
 function Ing_Rut(){
     Show()
     const modLogin = document.getElementById('BoxLog');
-    modLogin.innerHTML = "<h1>Login rut</h1><br><input type=\"text\" placeholder=\"Ingrese su rut\"/><br><br><button onsubmit=\"Check(1)\">JOIN</button>" ;
+    modLogin.innerHTML = "<h1>Login rut</h1><br><input type=\"text\" placeholder=\"Ingrese su rut\"/><br><br><button onclick=\"Check(1)\">JOIN</button>" ;
 }
 
 function Ing_Correo(){
     Show()
     const modLogin = document.getElementById('BoxLog');
-    modLogin.innerHTML = "<h1>Login por Correo</h1><br><input type=\"text\" placeholder=\"Ingrese su correo\"/><br><br><button onsubmit=\"Check(2)\">JOIN</button>" ;
+    modLogin.innerHTML = "<h1>Login por Correo</h1><br><input type=\"text\" placeholder=\"Ingrese su correo\"/><br><br><button onclick=\"Check(2)\">JOIN</button>" ;
 }
 
 function Ing_DuocPass(){
     Show()
     const modLogin = document.getElementById('BoxLog');
-    modLogin.innerHTML = "<h1>Login por contraseña</h1><br><input type=\"text\" placeholder=\"Ingrese su contraseña Duoc\"/><br><br><button onsubmit=\"Check(3)\">JOIN</button>" ;
+    modLogin.innerHTML = "<h1>Login por contraseña</h1><br><input type=\"text\" placeholder=\"Ingrese su contraseña Duoc\"/><br><br><button onclick=\"Check(3)\">JOIN</button>" ;
 }
 
 
@@ -30,7 +30,7 @@ function Check(Data,info){
         case 1:
             state = Val_RUT(info)
             if (state == 0){
-                location.href = '../PHP/TeSt.php'
+                location.href = './contact.html';
             } else {
 
             }
@@ -41,7 +41,7 @@ function Check(Data,info){
         case 2:
             state = Val_Mail(info)
             if (state == 0){    
-                location.href = '../PHP/TeSt.php'
+                
             } else {
                 
             }
@@ -51,7 +51,7 @@ function Check(Data,info){
         case 3:
             state = Val_Pass(info)
             if (state == 0){
-                location.href = '/PHP/Te'
+                location.href = './contact.html';
             } else {
                 
             }
@@ -82,5 +82,5 @@ function Val_Mail(info){
 }
 
 function Val_Pass(info){
-    return 1;
+    return 0;
 }
