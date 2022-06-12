@@ -20,7 +20,7 @@ function Ing_Correo(){
 function Ing_DuocPass(){
     Show()
     const modLogin = document.getElementById('BoxLog');
-    modLogin.innerHTML = "<h1>Login por contraseña</h1><br><input type=\"text\" placeholder=\"Ingrese su contraseña Duoc\"/><br><br><button onclick=\"Check(3)\">JOIN</button>" ;
+    modLogin.innerHTML = "<h1>Login por contraseña</h1><br><input type=\"password\" placeholder=\"Ingrese su contraseña Duoc\"/><br><br><button onclick=\"Check(3)\">JOIN</button>" ;
 }
 
 
@@ -65,9 +65,9 @@ function Val_RUT(info){
     var regex = "!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/";
     var result = info.match(regex);
     if (result){
-        return 1;
+        return 0;
     } else {
-        return 0; 
+        return 1; 
     }
 }
 
@@ -75,9 +75,9 @@ function Val_Mail(info){
     var regex = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
     var result =  info.match(regex);
     if (result){
-        return 1;
+        return 0;
     } else {
-        return 0; 
+        return 1; 
     }
 }
 
