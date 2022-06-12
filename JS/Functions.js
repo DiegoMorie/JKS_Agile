@@ -1,3 +1,5 @@
+
+
 function Show(){
     const Style = document.getElementById('method_holder');
     Style.style.opacity = 1;
@@ -28,9 +30,9 @@ function Check(Data,info){
         case 1:
             state = Val_RUT(info)
             if (state == 0){
-                // ALERT something wrong
+
             } else {
-                // Send to next page
+
             }
             break;
 
@@ -38,10 +40,10 @@ function Check(Data,info){
         // Validación con Correo
         case 2:
             state = Val_Mail(info)
-            if (state == 0){
-                // ALERT something wrong
+            if (state == 0){    
+
             } else {
-                // Send to next page
+                
             }
             break;
 
@@ -49,9 +51,9 @@ function Check(Data,info){
         case 3:
             state = Val_Pass(info)
             if (state == 0){
-                // ALERT something wrong
+
             } else {
-                // Send to next page
+                
             }
             break;
     }
@@ -60,13 +62,25 @@ function Check(Data,info){
 
 
 function Val_RUT(info){
-    
+    var regex = "!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/";
+    var result = info.match(regex);
+    if (result){
+        return 1;
+    } else {
+        return 0; 
+    }
 }
 
 function Val_Mail(info){
-
+    var regex = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
+    var result =  info.match(regex);
+    if (result){
+        return 1;
+    } else {
+        return 0; 
+    }
 }
 
 function Val_Pass(info){
-    
+    return 1;
 }
