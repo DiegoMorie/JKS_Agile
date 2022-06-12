@@ -1,26 +1,26 @@
 
 
 function Show(){
-    const Style = document.getElementById('method_holder');
-    Style.style.opacity = 1;
+    const showStyle = document.getElementById('method_holder');
+    showStyle.style.opacity = 1;
 }
 
 function Ing_Rut(){
     Show()
-    const Mod_login = document.getElementById('BoxLog');
-    Mod_login.innerHTML = "<h1>Login rut</h1><br><input type=\"text\" placeholder=\"Ingrese su rut\"/><br><br><button onsubmit=\"Check(1)\">JOIN</button>" ;
+    const modLogin = document.getElementById('BoxLog');
+    modLogin.innerHTML = "<h1>Login rut</h1><br><input type=\"text\" placeholder=\"Ingrese su rut\"/><br><br><button onsubmit=\"Check(1)\">JOIN</button>" ;
 }
 
 function Ing_Correo(){
     Show()
-    const Mod_login = document.getElementById('BoxLog');
-    Mod_login.innerHTML = "<h1>Login por Correo</h1><br><input type=\"text\" placeholder=\"Ingrese su correo\"/><br><br><button onsubmit=\"Check(2)\">JOIN</button>" ;
+    const modLogin = document.getElementById('BoxLog');
+    modLogin.innerHTML = "<h1>Login por Correo</h1><br><input type=\"text\" placeholder=\"Ingrese su correo\"/><br><br><button onsubmit=\"Check(2)\">JOIN</button>" ;
 }
 
 function Ing_DuocPass(){
     Show()
-    const Mod_login = document.getElementById('BoxLog');
-    Mod_login.innerHTML = "<h1>Login por contraseña</h1><br><input type=\"text\" placeholder=\"Ingrese su contraseña Duoc\"/><br><br><button onsubmit=\"Check(3)\">JOIN</button>" ;
+    const modLogin = document.getElementById('BoxLog');
+    modLogin.innerHTML = "<h1>Login por contraseña</h1><br><input type=\"text\" placeholder=\"Ingrese su contraseña Duoc\"/><br><br><button onsubmit=\"Check(3)\">JOIN</button>" ;
 }
 
 
@@ -30,7 +30,7 @@ function Check(Data,info){
         case 1:
             state = Val_RUT(info)
             if (state == 0){
-
+                location.href = '../PHP/TeSt.php'
             } else {
 
             }
@@ -41,7 +41,7 @@ function Check(Data,info){
         case 2:
             state = Val_Mail(info)
             if (state == 0){    
-
+                location.href = '../PHP/TeSt.php'
             } else {
                 
             }
@@ -51,7 +51,7 @@ function Check(Data,info){
         case 3:
             state = Val_Pass(info)
             if (state == 0){
-
+                location.href = '/PHP/Te'
             } else {
                 
             }
