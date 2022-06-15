@@ -11,6 +11,22 @@ body{
     background-color: rgb(235, 232, 228);
 }
 
+video{
+	position: fixed;
+
+	min-width: 100%;
+	min-height: 100%;
+
+	top:50%;
+	left:50%;
+
+	transform: translateX(-50%) translateY(-50%);
+
+	z-index: -1;
+
+}
+
+
 .header {
     overflow: hidden;
     background-color: var(--bg_DuocColor);
@@ -36,8 +52,7 @@ body{
 }
   
 .header a:hover {
-    background-color: #ddd;
-    color: black;
+    color: rgb(255, 255, 255);
 }
   
 .header a.active {
@@ -74,24 +89,28 @@ body{
     padding: 2em 0 4vh 0 ;
     background-position: center;
     background-size: cover;
-    background-image: url("../MEDIA/motivacion-y-esfuerzo.jpg");
+    background-image: url("../MEDIA/maps.jpg");
     
 }
 
 .bg_Duoc h1{
-    color: white;
+    color: rgb(255, 255, 255);
     font-style: italic;
+    text-transform: uppercase;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .column {
     float: left;
     width: 30%;
     padding: 10px;
+    background-color: rgb(38, 0, 255);
 }
 .row{
     margin-left: 2%;
     padding: 0;
     row-gap: 1vh;
+    color: white;
 }
 
 .row::after {
@@ -147,11 +166,75 @@ body{
     }
 }
 
+
+
+
+/*Footer*/
 .footer{
-    background-color: rgb(15, 18, 34);
-    grid-area: auto;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 10vh;
+	background-color:  #0b0a31;
+    padding: 7px 0;	
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #ffffff;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #ffffff;
+	background-color: #391d72;
+}
+
+/*Efecto hover: Galeria de fotos*/
+.container figure{
+	position: relative;
+	overflow: hidden;
+	border-radius: 6px;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.50);
+	cursor:pointer;
 }
