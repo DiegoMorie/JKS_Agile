@@ -20,7 +20,7 @@ function Ing_Correo(){
 function Ing_DuocPass(){
     Show()
     const modLogin = document.getElementById('BoxLog');
-    modLogin.innerHTML = "<h1>Login por contraseña</h1><br><input type=\"password\" placeholder=\"Ingrese su contraseña Duoc\"/><br><br><button onclick=\"Check(3)\">JOIN</button>" ;
+    modLogin.innerHTML = "<h1>Login por contraseña</h1><br><form action=\"#\"><input type=\"text\" placeholder=\"Ingrese su usuario Duoc\"><input type=\"password\" placeholder=\"Ingrese su contraseña Duoc\"/><br><br><input type=\"submit\" value=\"Entra!\"></form>" ;
 }
 
 
