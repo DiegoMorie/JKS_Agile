@@ -1,5 +1,3 @@
-
-
 function Show(){
     const showStyle = document.getElementById('method_holder');
     showStyle.style.opacity = 1;
@@ -20,11 +18,12 @@ function Ing_Correo(){
 function Ing_DuocPass(){
     Show()
     const modLogin = document.getElementById('BoxLog');
-    modLogin.innerHTML = "<h1>Login por contraseña</h1><br><form action=\"#\"><input type=\"text\" placeholder=\"Ingrese su usuario Duoc\"><input type=\"password\" placeholder=\"Ingrese su contraseña Duoc\"/><br><br><input type=\"submit\" value=\"Entra!\"></form>" ;
+    modLogin.innerHTML = "<h1>Login por contraseña</h1><br><input type=\"text\" placeholder=\"Ingrese nombre de usuario\" id=\"name_holder\"><input type=\"password\" placeholder=\"Ingrese su contraseña Duoc\" id=\"info_holder\"/><br><br><button onclick=\"Check(3)\">JOIN</button>";
 }
 
 
-function Check(Data,info){
+function Check(Data){
+    const info = document.querySelector('info_holder').value
     switch (Data){
         // Validación con RUT
         case 1:
@@ -49,7 +48,8 @@ function Check(Data,info){
 
         // Validación contraseña DuocUC
         case 3:
-            state = Val_Pass(info)
+            const name = document.querySelector('name_holder').value
+            state = Val_Pass(info,name)
             if (state == 0){
                 location.href = './contact.html';
             } else {
@@ -81,6 +81,9 @@ function Val_Mail(info){
     }
 }
 
-function Val_Pass(info){
+function Val_Pass(info,pass){
     return 0;
 }
+
+
+
