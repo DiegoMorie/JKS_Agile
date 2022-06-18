@@ -1,37 +1,15 @@
-function Show(){
-    const showStyle = document.getElementById('method_holder');
-    showStyle.style.opacity = 1;
-}
-
-function Ing_Rut(){
-    Show()
-    const modLogin = document.getElementById('BoxLog');
-    modLogin.innerHTML = "<h1>Login rut</h1><br><input type=\"text\" placeholder=\"Ingrese su rut\"/><br><br><button onclick=\"Check(1)\">JOIN</button>" ;
-}
-
-function Ing_Correo(){
-    Show()
-    const modLogin = document.getElementById('BoxLog');
-    modLogin.innerHTML = "<h1>Login por Correo</h1><br><input type=\"text\" placeholder=\"Ingrese su correo\"/><br><br><button onclick=\"Check(2)\">JOIN</button>" ;
-}
-
-function Ing_DuocPass(){
-    Show()
-    const modLogin = document.getElementById('BoxLog');
-    modLogin.innerHTML = "<h1>Login por contraseña</h1><br><input type=\"text\" placeholder=\"Ingrese nombre de usuario\" id=\"name_holder\"><input type=\"password\" placeholder=\"Ingrese su contraseña Duoc\" id=\"info_holder\"/><br><br><button onclick=\"Check(3)\">JOIN</button>";
-}
-
+// import { Toast } from 'boostrap.esm.min.js';
 
 function Check(Data){
     const info = document.querySelector('info_holder').value
-    switch (Data){
+    switch(Data){
         // Validación con RUT
         case 1:
             state = Val_RUT(info)
             if (state == 0){
-                location.href = './contact.html';
+                window.location.href = 'contact.html';
             } else {
-
+                window.alert("Something went wrong {RUT_METHOD}")
             }
             break;
 
@@ -40,9 +18,9 @@ function Check(Data){
         case 2:
             state = Val_Mail(info)
             if (state == 0){    
-                
+                window.location.href = 'contact.html';
             } else {
-                
+                window.alert("Something went wrong {Mail_METHOD}")
             }
             break;
 
@@ -51,9 +29,9 @@ function Check(Data){
             const name = document.querySelector('name_holder').value
             state = Val_Pass(info,name)
             if (state == 0){
-                location.href = './contact.html';
+                window.location.href= "contact.html";
             } else {
-                
+                window.alert("Something went wrong {USER_METHOD}")
             }
             break;
     }
@@ -86,4 +64,30 @@ function Val_Pass(info,pass){
 }
 
 
+function Redirect(data){
+    if(data == 1){
+        window.location.href = "contact.html";
+    }else {
+        window.location.href= "contact.html";
+    }
+}
 
+
+function FRedirect(site){
+    switch(site){
+        case 1:
+            window.location.href="https://www.youtube.com/watch?v=__UV4QRnkps";
+            break;
+        case 2:
+            window.location.href="https://www.youtube.com/watch?v=n8rd6hhz_7U";
+            break;
+        case 3:
+            window.location.href="https://www.youtube.com/watch?v=mpD8bIM1FLU";
+            break;
+        case 4:
+            window.location.href = "https://www.youtube.com/watch?v=mpD8bIM1FLU";
+            break;
+        
+
+    }
+}

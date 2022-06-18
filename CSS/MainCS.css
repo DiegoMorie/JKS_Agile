@@ -8,7 +8,8 @@ body{
     align-items: center;
     margin: 0;
     font-size: 16px;
-    background-color: rgb(235, 232, 228);
+    background-color: rgb(223, 214, 202);
+    color: rgba(0,0,0,0.50);
 }
 
 video{
@@ -24,44 +25,6 @@ video{
 
 	z-index: -1;
 
-}
-
-
-.header {
-    overflow: hidden;
-    background-color: var(--bg_DuocColor);
-    padding: 20px 10px;
-
-}
-  
-.header a {
-    float: left;
-    color: var(--bg_DuocContrast);
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px; 
-    line-height: 25px;
-    border-radius: 4px;
-}
-  
-.header a.logo {
-    font-size: 25px;
-    font-weight: bold;
-
-}
-  
-.header a:hover {
-    color: rgb(255, 255, 255);
-}
-  
-.header a.active {
-    background-color: dodgerblue;
-    color: white;
-}
-  
-.header-right {
-    float: right;
 }
 
 .Box{
@@ -119,23 +82,6 @@ video{
     clear: both;
 }
 
-@media screen and (max-width: 500px) {
-    .header a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    
-    .header-right {
-      float: none;
-    }
-
-    .column {
-        width: 100%;
-    }
-
-}
-
 .logIn_info{
     height: 10vh;
     width: auto;
@@ -166,75 +112,30 @@ video{
     }
 }
 
-
-
-
-/*Footer*/
-.footer{
-	background-color:  #0b0a31;
-    padding: 7px 0;	
-}
-.footer-col{
-   width: 25%;
-   padding: 0 15px;
-}
-.footer-col h4{
-	font-size: 18px;
-	color: #ffffff;
-	text-transform: capitalize;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
-}
-.footer-col h4::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: #ffffff;
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
-}
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
-}
-.footer-col ul li a{
-	font-size: 16px;
-	text-transform: capitalize;
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: 300;
-	color: #bbbbbb;
-	display: block;
-	transition: all 0.3s ease;
-}
-.footer-col ul li a:hover{
-	color: #ffffff;
-	padding-left: 8px;
-}
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover{
-	color: #ffffff;
-	background-color: #391d72;
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0; 
+    width: 100%;
 }
 
-/*Efecto hover: Galeria de fotos*/
-.container figure{
-	position: relative;
-	overflow: hidden;
-	border-radius: 6px;
-	box-shadow: 0px 1px 10px rgba(0,0,0,0.50);
-	cursor:pointer;
+.separator{
+    color: #fff701;
+}
+
+.f_left{
+    align-items: left;
+    align-content: left;
+    font-size: 0.7em;
+    align-self: flex-start;
+}
+
+.f_redirect{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;  
+}
+
+.f_redirect:active{
+    color: #FFFF;
 }
